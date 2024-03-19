@@ -1,0 +1,13 @@
+<div class="container">
+
+  <h1>Hi, this is restaurants lists</h1>
+
+  <!-- app/views/restaurants/index.html.erb -->
+  <ul>
+    <% @restaurants.each do |restaurant| %>
+      <li><%= link_to restaurant.name, restaurant_path(restaurant) %></li>
+    <% end %>
+  </ul>
+
+  <%= link_to "Create a new restaurant", new_path %>
+</div>
